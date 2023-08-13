@@ -6,3 +6,39 @@ What to put in leadership
 4) Addis Ababa Scout - Public Affairs Officer 
 5) Dean's Ambasseder
 6) Technovation - Chief coder and Chief Executive Officer
+
+
+   </div> <div >  
+      <img src = "CSharp.png" width="40%" height="90%">  </img>
+     
+    </div><div>testing</div>
+    <div >  
+      <img src = "CSharp.png" style="max-width: 100% ;">  </img>
+     
+    </div> <div >  
+      <img src = "CSharp.png" width="40%" height="90%">  </img>
+     
+    </div> <div >  
+      <img src = "CSharp.png" width="40%" height="90%">  </img>
+     
+    </div><div> testing</div>
+    <div >  
+      <img src = "CSharp.png" style="max-width: 100% ;">  </img>
+     
+    </div> <div >  
+      <img src = "CSharp.png" width="40%" height="90%">  </img>
+     
+    </div> <div >  
+      <img src = "CSharp.png" width="40%" height="90%">  </img>
+     
+    </div><div> testing</div>
+    <div >  
+      <img src = "CSharp.png" style="max-width: 100% ;">  </img>
+     
+    </div> <div >  
+      <img src = "CSharp.png" width="40%" height="90%">  </img>
+     
+    </div> <div >  
+      <img src = "CSharp.png" width="40%" height="90%">  </img>
+     
+    </div><div> testing</div>

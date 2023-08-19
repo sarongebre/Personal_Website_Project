@@ -309,19 +309,42 @@
 <div class="container4" > 
 
   <div class="item item1">
-      <form action="/action_page.php">
-      <label for="cars">Filter</label> <br> <br>
-      <label for="cars">Projects</label>
-      <br>
-      <select name="cars" id="cars">
-        <option value="">Choose an option</option>
-        <option value="softwarePackages">Software Packages</option>
-        <option value="websites">Websites</option>
-        <option value="apps">Apps</option>
-      </select>
-      <br><br>
-      <!-- <input type="submit" value="Submit"> -->
-     </form> 
+
+    <label for="cars">Filter</label> <br> <br>
+
+    <fieldset>
+      <legend>Select a maintenance drone:</legend>
+    
+      <div>
+        <input type="radio" id="huey" name="drone" value="huey" checked />
+        <label for="huey">Coding Projects</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="dewey" name="drone" value="dewey" />
+        <label for="dewey">Designing/Prototyping Projects</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="louie" name="drone" value="louie" />
+        <label for="louie">Honors projects</label>
+      </div>
+    </fieldset>
+  <br>
+      <form>
+        
+        <label for="cars">Projects</label>
+        <br>
+        <select name="projects" id="projects"  onchange="displayCheck(this.value)">
+          <option value="">Choose an option</option>
+          <option value="softwarePackages">Software Packages</option>
+          <option value="websites">Websites</option>
+          <option value="apps">Apps</option>
+          <option value="apps">Machine Learning</option>
+        </select>
+        <br><br>
+        <!-- <input type="submit" value="Submit"> -->
+      </form> 
 
       <!--    <form action="/action_page.php">
         <label for="cars">Websites</label>
@@ -372,8 +395,8 @@
 
   <div class="blueBackground">
 
-    <div class="projectItem">  
-      <img src = "CSharp.png" style="width: 100%;">  </img>
+    <div class="projectItem softwarePackages">  
+      <img src = "c.png" style="width: 100%;">  </img>
       <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -384,8 +407,8 @@
       </p>
     </div> 
 
-    <div class="projectItem">  
-      <img src = "CSharp.png" style="width: 100% ;">  </img>
+    <div class="projectItem softwarePackages">  
+      <p style="background-color: white"><img src = "java.png" style="width: 100% ;">  </img>  </p>
       <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -396,8 +419,8 @@
       </p>
     </div> 
 
-    <div class="projectItem">  
-      <img src = "CSharp.png" style="width: 100% ;">  </img>
+    <div class="projectItem softwarePackages">  
+      <p style="background-color: white"> <img src = "WebGL.png" style="width: 100% ;">  </img> </p>
       <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -408,8 +431,8 @@
       </p>
     </div> 
 
-    <div class="projectItem">  
-      <img src = "CSharp.png" style="width: 100% ;">  </img>
+    <div class="projectItem softwarePackages">  
+      <p style="background-color: white"> <img src = "Drupal-Wordmark.png" style="width: 100% ;">  </img> </p>
       <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -419,9 +442,145 @@
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
       </p>
     </div> 
+
+    <div class="projectItem websites" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p> Math Learning testing testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem websites" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p> Game Store testing testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem websites" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem websites" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p> Furby-Help-Desk testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem websites" >  
+      <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
+      <p> Get DB Objects Program testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+
+    <div class="projectItem websites" >  
+      <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
+      <p> Game Store Website testin testing testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem websites" >  
+      <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
+      <p> hEALING ARTS testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div>
+
+    <div class="projectItem website" >  
+      <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
+      <p> Portfolio Website testing testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div>
+
+    <div class="projectItem apps" >  
+      <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
+      <p> Aripilla testing testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div>
+
+    <div class="projectItem machineLearning" >  
+      <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
+      <p> Aripilla testing testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div>
+
+
  
   </div>
 </div> 
+
+<div class="container5">
+
+    
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+    
+</div>
 
 <!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js'></script>

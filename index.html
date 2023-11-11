@@ -312,35 +312,41 @@
 
     <label for="cars">Filter</label> <br> <br>
 
-    <fieldset>
-      <legend>Select a maintenance drone:</legend>
-    
+    <fieldset  id="project-type-wrapper">
+      <legend>Project type</legend>
+      <!-- <input type="radio" id="code-projects" name="projects" value="code-projects" if you want default checked /> -->
+
       <div>
-        <input type="radio" id="huey" name="drone" value="huey" checked />
-        <label for="huey">Coding Projects</label>
+        <input type="radio" id="code-projects" name="projects" value="code-projects" />
+        <label for="design-projects">Coding Projects</label>
       </div>
     
       <div>
-        <input type="radio" id="dewey" name="drone" value="dewey" />
-        <label for="dewey">Designing/Prototyping Projects</label>
+        <input type="radio" id="design-projects" name="projects" value="design-projects" />
+        <label for="design-projects">Designing/Prototyping Projects</label>
       </div>
     
       <div>
-        <input type="radio" id="louie" name="drone" value="louie" />
-        <label for="louie">Honors projects</label>
+        <input type="radio" id="honors-projects" name="projects" value="honors-projects" />
+        <label for="honors-projects">Honors projects</label>
+      </div>
+
+      <div>
+        <input type="radio" id="all-projects" name="projects" value="all-projects" checked />
+        <label for="all-projects">All projects</label>
       </div>
     </fieldset>
   <br>
-      <form>
-        
-        <label for="cars">Projects</label>
+
+      <form id="coding-projects-list-form">
+        <label for="cars">Coding Project Type</label>
         <br>
         <select name="projects" id="projects"  onchange="displayCheck(this.value)">
-          <option value="">Choose an option</option>
-          <option value="softwarePackages">Software Packages</option>
-          <option value="websites">Websites</option>
-          <option value="apps">Apps</option>
-          <option value="apps">Machine Learning</option>
+          <option value="none">All projects</option>
+          <option value="software-packages">Software Packages (Java/C++)</option>
+          <option value="websites">Websites (React/HTML/CSS/JS)</option>
+          <option value="apps">Apps (React/HTML/CSS/JS)</option>
+          <option value="machine-learning">Machine Learning</option>
         </select>
         <br><br>
         <!-- <input type="submit" value="Submit"> -->
@@ -367,37 +373,14 @@
         </select>
         <br><br>
       </form>   
-     -->
-
- 
-      <form action="/action_page.php">
-      <label for="cars"> Designing/Prototyping projects</label>
-      <br>
-      <select name="cars" id="cars">
-        <option value="">Choose an option</option>
-        <option value="Java">Java</option>
-      
-      </select>
-      <br><br>
-      </form> 
-
-      <form action="/action_page.php">
-      <label for="cars">Honors projects</label>
-      <br>
-      <select name="cars" id="cars">
-        <option value="">Choose an option</option>
-        <option value="Java">Java</option>
-      
-      </select>
-      <br><br>
-      </form>  
+     --> 
   </div>
 
   <div class="blueBackground">
 
-    <div class="projectItem softwarePackages">  
+    <div class="projectItem coding-project software-packages">  
       <img src = "c.png" style="width: 100%;">  </img>
-      <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
+      <p> C++ testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -407,9 +390,9 @@
       </p>
     </div> 
 
-    <div class="projectItem softwarePackages">  
+    <div class="projectItem coding-project software-packages">  
       <p style="background-color: white"><img src = "java.png" style="width: 100% ;">  </img>  </p>
-      <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
+      <p> Java testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -419,7 +402,7 @@
       </p>
     </div> 
 
-    <div class="projectItem softwarePackages">  
+    <div class="projectItem coding-project websites">  
       <p style="background-color: white"> <img src = "WebGL.png" style="width: 100% ;">  </img> </p>
       <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -431,7 +414,7 @@
       </p>
     </div> 
 
-    <div class="projectItem softwarePackages">  
+    <div class="projectItem coding-project websites">  
       <p style="background-color: white"> <img src = "Drupal-Wordmark.png" style="width: 100% ;">  </img> </p>
       <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -443,7 +426,7 @@
       </p>
     </div> 
 
-    <div class="projectItem websites" >  
+    <div class="projectItem coding-project websites" >  
       <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
       <p> Math Learning testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -455,7 +438,7 @@
       </p>
     </div> 
 
-    <div class="projectItem websites" >  
+    <div class="projectItem  coding-project websites" >  
       <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
       <p> Game Store testing testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -467,9 +450,9 @@
       </p>
     </div> 
 
-    <div class="projectItem websites" >  
+    <div class="projectItem designs">  
       <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
-      <p>testing testing testing testingtesting testingtesting testingtesting testingtesting testing
+      <p>Figma first project testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -479,7 +462,68 @@
       </p>
     </div> 
 
-    <div class="projectItem websites" >  
+    <div class="projectItem designs" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p>Figma first second project testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem  designs" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p>blender project first second project testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem  designs" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p>Figma third project testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem  designs" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p>Invision project 1 third project testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+    <div class="projectItem  designs" >  
+      <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
+      <p>Invision project 2 third project testing testing testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testingtesting testing
+        testing testingtesting testingtesting testingtesting testingtesting testingtesting testing 
+      </p>
+    </div> 
+
+
+    <div class="projectItem coding-project websites" >  
       <p style="background-color: white"> <img src = "react.png" style="width: 100% ;">  </img> </p>
       <p> Furby-Help-Desk testing testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -491,7 +535,7 @@
       </p>
     </div> 
 
-    <div class="projectItem websites" >  
+    <div class="projectItem coding-project websites" >  
       <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
       <p> Get DB Objects Program testing testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -504,7 +548,7 @@
     </div> 
 
 
-    <div class="projectItem websites" >  
+    <div class="projectItem coding-project websites" >  
       <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
       <p> Game Store Website testin testing testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -516,7 +560,7 @@
       </p>
     </div> 
 
-    <div class="projectItem websites" >  
+    <div class="projectItem coding-project websites" >  
       <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
       <p> hEALING ARTS testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -528,7 +572,7 @@
       </p>
     </div>
 
-    <div class="projectItem website" >  
+    <div class="projectItem coding-project website" >  
       <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
       <p> Portfolio Website testing testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -540,7 +584,7 @@
       </p>
     </div>
 
-    <div class="projectItem apps" >  
+    <div class="projectItem coding-project apps" >  
       <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
       <p> Aripilla testing testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -552,9 +596,9 @@
       </p>
     </div>
 
-    <div class="projectItem machineLearning" >  
+    <div class="projectItem honors machine-learning" >  
       <p style="background-color: white"> <img src = "html_css_js_group.png" style="width: 100% ;">  </img> </p>
-      <p> Aripilla testing testingtesting testingtesting testingtesting testing
+      <p> Machine Learning testing testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
         testing testingtesting testingtesting testingtesting testingtesting testingtesting testing
@@ -571,14 +615,65 @@
 
 <div class="container5">
 
+  <div class="contact-form-outer-wrapper">
+
+    <form method="POST" id="contactForm" name="contactForm">
+      <div class="contact-form-wrapper">
+
+
+      <div>           
+        <p class="label"> <label class="label">Name</label> </p>
+        <input type="text" class="form-attributes" name="name" id="name" placeholder="Name">
+       </div>
+  
+       
+   <div>
+    <p class="label"> <label class="label">Email</label> </p>
+
+    <input type="email" class="form-attributes" name="email" id="email" placeholder="Email">
+
+   </div>
+        
+       <div>
+        <p class="label"> <label class="label">Subject</label> </p>
+
+        <input type="text" class="form-attributes" name="subject" id="subject" placeholder="Subject">
+
+
+       </div>
+        
+
+       <div>
+
+        <p class="label"> <label class="label">Message</label> </p>
+
+        <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+
+       </div>
+       
+     
+       <div class="contact-form-btn">
+        <input type="submit" value="Send Message" class="contact-form-btn">
+
+       </div>
+      </div>
+    </form>
     
-  <form>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
-  </form> 
+    <!-- <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>  -->
+  
+  </div>
+  
+  <div class="contact-form-img-wrapper">
+    <img class="contact-form-img" src="contact-us-one.jpg"> 
+  </div>
+
+
     
 </div>
 
@@ -587,6 +682,7 @@
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
 <script  src="./script.js"></script>
+
 
 </body>
 </html>

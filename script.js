@@ -194,21 +194,134 @@ if (buttonId == "Programming") {
 
 
 function displayCheck(selectValue) {
+
+  // <option value="software-packages">Software Packages (Java/C++)</option>
+  // <option value="websites">Websites (React/HTML/CSS/JS)</option>
+  // <option value="apps">Apps (React/HTML/CSS/JS)</option>
+  // <option value="machine-learning">Machine Learning</option>
+
+  const ProjectItems = document.querySelectorAll(".projectItem");
+  ProjectItems.forEach((projectItem) => {
+    projectItem.style.display = "none";
+  });
   //Add always none value for projectitem
-  if (selectValue == 'softwarePackages') {
-    const softwarePackageProjectItems = document.querySelectorAll(".softwarePackages");
+  if (selectValue == 'software-packages') {
+    const softwarePackageProjectItems = document.querySelectorAll(".software-packages");
+    softwarePackageProjectItems.forEach((projectItem) => {
+      projectItem.style.display = "grid";
+    });
+  }
+
+  if (selectValue == 'websites') {
+    const softwarePackageProjectItems = document.querySelectorAll(".websites");
+    softwarePackageProjectItems.forEach((projectItem) => {
+      projectItem.style.display = "grid";
+    });
+  }
+
+  
+  if (selectValue == 'apps') {
+    const softwarePackageProjectItems = document.querySelectorAll(".apps");
+    softwarePackageProjectItems.forEach((projectItem) => {
+      projectItem.style.display = "grid";
+    });
+  }
+
+  if (selectValue == 'machine-learning') {
+    const softwarePackageProjectItems = document.querySelectorAll(".machine-learning");
+    softwarePackageProjectItems.forEach((projectItem) => {
+      projectItem.style.display = "grid";
+    });
+  }
+
+  if (selectValue == 'none') {
+    const softwarePackageProjectItems = document.querySelectorAll(".coding-project");
     softwarePackageProjectItems.forEach((projectItem) => {
       projectItem.style.display = "grid";
     });
   }
 }
 
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  e.target.elements.name.value = '';
-  e.target.elements.email.value = '';
-  e.target.elements.message.value = '';
-});
+// document.querySelector('#contact-form').addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   e.target.elements.name.value = '';
+//   e.target.elements.email.value = '';
+//   e.target.elements.message.value = '';
+// });
+
+
+//Fieldset
+document.querySelector('#project-type-wrapper').addEventListener("change",function(e) {
+
+  const allProjects = document.querySelectorAll('.projectItem');
+
+  const projectRadioButtons = document.querySelectorAll('input[name="projects"]');
+  for (const projectRadioButton of projectRadioButtons) {
+    // console.log(projectRadioButton.value);
+    if (projectRadioButton.value == 'code-projects' && projectRadioButton.checked == true ) {
+
+      allProjects.forEach((projectItem) => {
+        projectItem.style.display = "none";
+      });
+
+      const codingProjects = document.querySelectorAll('.coding-project');
+
+      codingProjects.forEach((projectItem) => {
+        projectItem.style.display = "grid";
+      });
+
+
+
+      document.getElementById("coding-projects-list-form").style.display = "block";
+      console.log("it got in");
+
+    } else if (projectRadioButton.value == 'code-projects' && projectRadioButton.checked == false ) {
+            document.getElementById("coding-projects-list-form").style.display = "none";
+    }
+
+    if (projectRadioButton.value == 'design-projects' && projectRadioButton.checked == true ) {
+
+      allProjects.forEach((projectItem) => {
+        projectItem.style.display = "none";
+      });
+
+      const designProjects = document.querySelectorAll('.designs');
+
+      designProjects.forEach((projectItem) => {
+        projectItem.style.display = "grid";
+      });
+
+      // designProjects.style.display = "grid";
+
+    } else if (projectRadioButton.value == 'honors-projects' && projectRadioButton.checked == true ) {
+
+      allProjects.forEach((projectItem) => {
+        projectItem.style.display = "none";
+      });
+
+      const honorsProjects = document.querySelectorAll('.honors');
+
+      honorsProjects.forEach((projectItem) => {
+        projectItem.style.display = "grid";
+      });
+
+    } else if (projectRadioButton.value == 'all-projects' && projectRadioButton.checked == true ) {
+
+      allProjects.forEach((projectItem) => {
+        projectItem.style.display = "none";
+      });
+
+      allProjects.forEach((projectItem) => {
+        projectItem.style.display = "grid";
+      });
+    }
+
+    
+  }
+
+})
+
+
 
 
 function myFunction() {

@@ -72,7 +72,14 @@ function init(){
     // canvas: sceneSurface,
     antialias:true
   });
-  renderer.setSize(  550, 550 );
+
+  const element = document.getElementById("canvas-wrapper");
+  parent_height = element.offsetHeight;
+  parent_width = element.offsetWidth;
+
+  renderer.setSize(  parent_width, parent_height );
+console.log("offsehandw" + parent_height);
+  // renderer.setSize(  550, 550 );
   sceneSurface.appendChild(renderer.domElement);
 
   //document.body.appendChild( sceneSurface );
@@ -144,6 +151,35 @@ function init(){
 
 }
 
+// parent_height = element.offsetHeight;
+// renderer.setSize(  window.innerWidth/2.5, parent_height );
+// console.log("offsetheight" + parent_height );
+
+
+window.addEventListener('resize', () => {
+  // update display width and height
+  width = window.innerWidth
+  height = window.innerHeight
+  // update camera aspect
+  camera.aspect = width / height
+  camera.updateProjectionMatrix()
+  // update renderer
+  renderer.setSize(width, height)
+  var element2 = document.getElementById("canvas-wrapper");
+
+  parent_height = element2.offsetHeight;
+  parent_width = element2.offsetWidth;
+
+  console.log("offsetheightresize" + parent_height );
+    renderer.setSize(parent_width,parent_height)
+
+  // renderer.setSize(window.innerWidth/2.5,parent_height)
+  
+  renderer.render(scene, camera)
+
+  // console.log(parent_height);
+})
+
 function playAction(index){
   const action = actions[index];
   mixer.stopAllAction();
@@ -163,6 +199,7 @@ function resize(){
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize( 550, 550);
+  renderer.setViewport();
 };
 
 function changeDiv(buttonId){

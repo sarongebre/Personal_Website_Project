@@ -1,4 +1,4 @@
-var scene, camera, renderer, clock, mixer, actions;
+var scene, camera, renderer, clock, mixer, actions, loader, object, globalObject;
 
 init();
 
@@ -50,9 +50,9 @@ function init(){
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x005c89);
 
-  camera = new THREE.PerspectiveCamera( 90, 200 / 200, 0.1, 1000  );
+  camera = new THREE.PerspectiveCamera( 90, 1, 0.1, 1000  );
   //camera.position.set(0, 1.6,1);
-  camera.position.y = 1;
+  camera.position.y = 1.15;
   camera.position.z = 2.2;
 
   const ambient = new THREE.HemisphereLight(0xffffbb, 0x080820, 2);
@@ -107,16 +107,18 @@ console.log("offsehandw" + parent_height);
   //         {start:225, end:251, name:"die", loop:false},
 	// 			];
   //Load meshes here
-  const loader = new THREE.GLTFLoader();
+  loader = new THREE.GLTFLoader();
   //loader.setPath(assetPath);
+ loader.load('waveGltf.gltf', object => {
+  globalObject = object;
 
-  loader.load('waveGltf.gltf', object => {
     mixer = new THREE.AnimationMixer(object.scene);
 		//Uncomment block to see all actions
 		//object.scene.children[0].rotation.x = 0;
 		const action = mixer.clipAction(object.animations[0]);
 		action.play();
 
+    // main = object;
 		//Comment out from here to:
 		/*
 		mixer.addEventListener( 'finished', e => {
@@ -139,7 +141,10 @@ console.log("offsehandw" + parent_height);
     actions[0].play();
 		*/
 		//here ***
-    object.scene.scale.set(.007,.007,.007);
+    object.scene.scale.set(.005,.0068,.007);
+    // object.scale.setScalar(.007,.007,.007);
+    // object.scene.position.y = -0.2 ; //Up and down
+
     object.scene.position.y =  0; //Up and down
     object.scene.position.x = 0; //Left and right
     object.scene.position.z = 1.5;
@@ -176,6 +181,9 @@ window.addEventListener('resize', () => {
   // renderer.setSize(window.innerWidth/2.5,parent_height)
   
   renderer.render(scene, camera)
+  // object.scene.scale.set(0.1,.5,.7);
+  globalObject.scene.scale.set(.009,.007,.007);
+
 
   // console.log(parent_height);
 })
@@ -195,12 +203,12 @@ function update(){
   mixer.update(dt);
 }
 
-function resize(){
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize( 550, 550);
-  renderer.setViewport();
-};
+// function resize(){
+//   camera.aspect = window.innerWidth / window.innerHeight;
+//   camera.updateProjectionMatrix();
+//   renderer.setSize( 550, 550);
+//   renderer.setViewport();
+// };
 
 function changeDiv(buttonId){
   // alert("Hello! I am an alert box!!");
@@ -357,7 +365,40 @@ document.querySelector('#project-type-wrapper').addEventListener("change",functi
   }
 
 })
+// input#myCheckbox:checked
+let checkbox = document.querySelector('input[name="hamburger-toggle"]');
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      const menu_list = document.querySelector('#hamburger-menu-div');
+      menu_list.style.display = "block"
+    } else {
+      const menu_list = document.querySelector('#hamburger-menu-div');
+      menu_list.style.display = "none"
+    }
 
+    console.log("checjbox value" + checkbox.checked);
+
+  });
+
+  addEventListener("resize", (event) => {
+
+    if (window.innerWidth >= 1150) {
+      if (checkbox.checked) {
+        let menu_list = document.querySelector('#hamburger-menu-div');
+        menu_list.style.display = "none"
+        checkbox.checked = false;
+      } 
+    }
+
+    console.log(window.innerWidth);
+  });
+
+
+  //on resieze, if browser size is less than this and the checkbox is still checkded, uncheck the check box
+
+// const selectedOption = document.getElementById('mySelect').querySelector('option:checked');
+
+// console.log(selectedOption.value);
 
 
 

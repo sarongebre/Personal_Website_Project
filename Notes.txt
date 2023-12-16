@@ -42,3 +42,16 @@ What to put in leadership
       <img src = "CSharp.png" width="40%" height="90%">  </img>
      
     </div><div> testing</div>
+
+
+Media queries needed 
+1) For Nav at a certain point
+2) For skills buttons
+3) For skills flex items (At some point isntead of floe direction row do column so the items get bigger scrollable)
+4) css classes need to be renamed. including some images
+5) Don't forget to add alt tags
+
+
+Please remember to add a link to us wherever you use this icon
+It should look like this:
+Hamburger Menu icon by Icons8

@@ -54,7 +54,7 @@ nav{
   position: fixed; */
   position: absolute;
   background: #1b1b1b;
-  width: 100vw;
+  width: 98.8vw;
   /* height: 10%; */
   margin-top: 0px; 
   margin-bottom: 0px; 
@@ -477,7 +477,7 @@ text-align: center;
   margin-left: auto;
   margin-right:auto ;
  
-  width: 70%; 
+  width: 60%; 
   background-color: #f1f1f1;
   display: inline-flex;
   justify-content: center;
@@ -489,7 +489,7 @@ text-align: center;
   /* margin-top: 2%; */
   
   list-style: none;
-  column-gap:  10vw;
+  column-gap:  6vw;
   max-width: 100%;
  
   display: flex;
@@ -526,9 +526,9 @@ text-align: center;
 
 .whiteBackground {
   /* position: absolute; */
-  height: 80%;
+  height: 70%;
   /* height: var( --heightWhiteBackground); */
-  width: 95%; 
+  width: 80%; 
   background-color: white;
   /* Another way to center stuff besides using flex*/
   margin-bottom: auto;
@@ -555,7 +555,76 @@ text-align: center;
   }
  
 /* /////////////only mess with dis */
-    #container3Programming{
+
+   
+#container3Programming {
+  /*flex/
+  /* height: 1000px; */
+ display: none;
+ /* flex-wrap: wrap ; */
+ margin-top: 0.5%;
+ text-align: center;
+/* align-items: center; */
+
+/* justify-content:center; */
+/* height: 100%; */
+width: 99%;
+ /* flex-flow: row wrap; */
+ flex-wrap:  wrap;
+
+ column-gap: 2%;
+ /* row-gap: 2%; */
+ justify-content: center;
+align-items: center;
+text-align: center;
+}
+/*For all Paragraphs*/
+#container3Programming  div{
+/* height: auto; */
+  /* height: 10%; */
+  width: 20%;
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 200px;
+  /* max-height: 205px ; */
+/* height: 50%; */
+  /* height: fit-content; */
+/* max-height: 50%; */
+  flex: 1 -1 auto;
+/* flex: 1;   */
+margin-top: 1.5%;
+  /* flex: 90% 50%; */
+  /* flex: 0 0 auto ; */
+background-color: #fea;
+border-right: #000;
+padding-top: 0;
+flex-shrink: 0;
+/* 
+margin-bottom: auto;
+margin-left: auto;
+margin-right:auto ; */
+
+border-style: double;
+
+justify-content: center;
+align-items: center;
+text-align: center;
+
+display:flex;
+/* vertical-align: middle; */
+}
+
+#container3Programming  img{
+  /* width: min-content; */
+max-width: 70%;
+  border-style: double; 
+
+}
+
+
+
+
+    #container3Programmingoff{
       /*flex/
       /* height: 1000px; */
      display: none;
@@ -571,7 +640,7 @@ text-align: center;
      /* row-gap: 2%; */
     }
     /*For all Paragraphs*/
-    #container3Programming * {
+    #container3Programmingoff * {
       flex: 20% 200 0;   
       margin-top: 2%;
       /* flex: 90% 50%; */
@@ -587,7 +656,7 @@ border-style: double;
       
     }
   
-    #container3Programming p{
+    /* #container3Programming p{
       text-align: center;
       
   width: 80%; 
@@ -599,9 +668,77 @@ border-style: double;
   line-height : 25px;
   padding: 0;
   
-      }
+      } */
+
+
+      
+    #container3Design {
+      /*flex/
+      /* height: 1000px; */
+     display: none;
+     /* flex-wrap: wrap ; */
+     margin-top: 0.5%;
+     text-align: center;
+/* align-items: center; */
+
+/* justify-content:center; */
+/* height: 100%; */
+width: 99%;
+     /* flex-flow: row wrap; */
+     flex-wrap:  wrap;
+
+     column-gap: 2%;
+     /* row-gap: 2%; */
+     justify-content: center;
+align-items: center;
+text-align: center;
+    }
+    /*For all Paragraphs*/
+#container3Design  div{
+  /* height: auto; */
+      /* height: 10%; */
+      width: 20%;
+      min-width: 200px;
+      max-width: 300px;
+      min-height: 200px;
+      /* max-height: 205px ; */
+/* height: 50%; */
+      /* height: fit-content; */
+/* max-height: 50%; */
+      flex: 1 -1 auto;
+/* flex: 1;   */
+   margin-top: 1.5%;
+      /* flex: 90% 50%; */
+      /* flex: 0 0 auto ; */
+background-color: #fea;
+border-right: #000;
+padding-top: 0;
+flex-shrink: 0;
+/* 
+margin-bottom: auto;
+margin-left: auto;
+margin-right:auto ; */
+
+border-style: double;
+
+justify-content: center;
+align-items: center;
+text-align: center;
+
+display:flex;
+/* vertical-align: middle; */
+    }
+
+    #container3Other  img{
+      /* width: min-content; */
+   max-width: 70%;
+      border-style: double; 
+   
+    }
+
+    /* seperate */
   
-    #container3Design{
+    #container3Designoff{
       /*flex/
       /* height: 1000px; */
      display: none;
@@ -617,7 +754,7 @@ border-style: double;
      /* row-gap: 2%; */
     }
     /*For all Paragraphs*/
-    #container3Design * {
+    #container3Designoff * {
 flex: 20% 200 0;   
    margin-top: 2%;
       /* flex: 90% 50%; */
@@ -632,41 +769,77 @@ margin-right:auto ;
 border-style: double;
       
     }
-
+    #container3Design  img{
+      /* width: min-content; */
+   max-width: 70%;
+      border-style: double; 
+   
+    }
 
     #container3Other{
       /*flex/
       /* height: 1000px; */
      display: none;
      /* flex-wrap: wrap ; */
-     margin-top: 1%;
+     margin-top: 0.5%;
      text-align: center;
 /* align-items: center; */
 
 /* justify-content:center; */
-   
-     flex-flow: row wrap;
+/* height: 100%; */
+width: 99%;
+     /* flex-flow: row wrap; */
+     flex-wrap:  wrap;
+
      column-gap: 2%;
      /* row-gap: 2%; */
+     justify-content: center;
+align-items: center;
+text-align: center;
     }
     /*For all Paragraphs*/
-    #container3Other * {
-flex: 20% 0 0;  
-
-   margin-top: 2%;
+#container3Other  div{
+  /* height: auto; */
+      /* height: 10%; */
+      width: 20%;
+      min-width: 200px;
+      max-width: 300px;
+      min-height: 200px;
+      /* max-height: 205px ; */
+/* height: 50%; */
+      /* height: fit-content; */
+/* max-height: 50%; */
+      flex: 1 -1 auto;
+/* flex: 1;   */
+   margin-top: 1.5%;
       /* flex: 90% 50%; */
       /* flex: 0 0 auto ; */
 background-color: #fea;
 border-right: #000;
 padding-top: 0;
-
-/* margin-bottom: auto; */
+flex-shrink: 0;
+/* 
+margin-bottom: auto;
 margin-left: auto;
-margin-right:auto ;
+margin-right:auto ; */
+
 border-style: double;
-      
+
+justify-content: center;
+align-items: center;
+text-align: center;
+
+display:flex;
+/* vertical-align: middle; */
     }
 
+    #container3Other  img{
+      /* width: min-content; */
+    
+   max-width: 70%;
+      border-style: double; 
+   
+    }
   
 /* #btns{
   position: absolute;
@@ -684,10 +857,12 @@ border-style: double;
 
 
 #container3Leadership{
+  flex-wrap:  wrap;
+
   /*flex/
   /* height: 1000px; */
-height: 100%;
-flex-direction: row;
+/* height: 100%; */
+/* flex-direction: row; */
 /* justify-content: space-between; */
 
  flex-wrap: wrap ;
@@ -700,24 +875,29 @@ flex-direction: row;
 /* justify-content:center; */
 
  /* flex-flow: row wrap; */
- column-gap: 2%;
+ column-gap: 1%;
  /* column-gap: 2%; */
 
- row-gap: 2%;
+ row-gap: 1%;
  display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
  /* very important */
- align-content: flex-start;
+ /* align-content: flex-start; */
  
 }
 /*For all Paragraphs* *  for all child elements*/
-#container3Leadership > div {
+#container3Leadership  div {
   /* flex: 2 0 10;   */
-
-  flex: 30% 0 150;  
+  flex-shrink: 0;
+max-height: 300px;
+min-height: 300px;
+  flex: 25% 0 150;  
  align-items: center;
 
 /* justify-content:center; */
-  margin-top: 2%;
+  /* margin-top: 2%; */
   /* flex: 90% 50%; */
   /* flex: 0 0 auto ; */
 background-color: #fea;
@@ -725,20 +905,53 @@ border-right: #000;
 padding-top: 0;
 
 /* margin-bottom: auto; */
-margin-left: auto;
+/* margin-left: auto;
 margin-right: auto;
 margin-top: 0;
-margin-bottom: 0;
+margin-bottom: 0; */
 
 border-style: double;
-  height: fit-content;
+height: auto;
+display: flex;
+flex-direction: column;
+  /* height: 100%; */
+  /* width: 100%; */
 }
 
+
 #container3Leadership p {
+  /* border-top: double black 1px; */
   height: 100%;
  font-size: 1em;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
+
+#leadership-image-wrapper {
+  border-bottom: double black 1px;
+  max-width: 10%;
+  max-height: 20%;
+  display: flex;
+  /* position: relative; */
+
+}
+
+#container3Leadership img {
+   /* border-bottom: 1px solid black ; */
+   /* position: fixed; */
+   overflow-y: hidden;
+max-width: 100%;
+width: 100%;
+height: 100%;
+max-height: 200px;
+min-height: 150px;
+/* max-height: fit-content; */
+object-fit: cover;
+}
+
+
+/* #container3Leadership span {
+  border-bottom: 1px solid black ;
+} */
 
 .container4{
   position: static;
@@ -833,10 +1046,12 @@ display: inline-block; */
   display: grid;
   /* grid-auto-flow: row; */
   /* grid-template-columns: ; */
-  /* padding: 3px; */
+  padding: 3%;
   gap: 2em;
   justify-items: center; /* adjusted */
 align-items: center;
+color: #f0f0f0;
+/* width: 100%; */
   
 }
 
@@ -845,12 +1060,25 @@ align-items: center;
 .blueBackground > div {
     display: grid;
   border: 1px solid rgba(180, 37, 37, 0.8);
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 6fr;
 
     align-items: center;
     justify-content: center;
+/* width: 95%; */
 
+}
 
+.blueBackground p {
+  padding: 0px 3%;
+  /* text-align: center; */
+
+  /* width: 50%; */
+/* width: 95%; */
+
+}
+
+.blueBackground a {
+color: lightgray;
 }
 
 /* 

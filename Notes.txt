@@ -55,3 +55,8 @@ Media queries needed
 Please remember to add a link to us wherever you use this icon
 It should look like this:
 Hamburger Menu icon by Icons8
+
+<a href="https://www.flaticon.com/free-icons/wordpress" title="wordpress icons">Wordpress icons created by Freepik - Flaticon</a>
+
+
+Add other menue link and add certifications, resume, and githuhb link 

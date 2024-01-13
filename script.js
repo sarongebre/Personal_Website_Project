@@ -370,7 +370,7 @@ let checkbox = document.querySelector('input[name="hamburger-toggle"]');
   checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
       const menu_list = document.querySelector('#hamburger-menu-div');
-      menu_list.style.display = "block"
+      menu_list.style.display = "grid"
     } else {
       const menu_list = document.querySelector('#hamburger-menu-div');
       menu_list.style.display = "none"

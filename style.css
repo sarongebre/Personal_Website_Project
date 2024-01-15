@@ -517,7 +517,7 @@ text-align: center;
 }
 
 .rectangleNav{
-  
+  /* height: 10%; */
   margin-top: 3%;
   margin-bottom: auto;
   margin-left: auto;
@@ -533,11 +533,13 @@ text-align: center;
 
 .rectangleNav ul{
   /* margin-top: 2%; */
-  
+  /* height: 100%; */
   list-style: none;
   column-gap:  6vw;
+  /* column-gap:  20px; */
+
   max-width: 100%;
- 
+ width: 100%;
   display: flex;
    flex-wrap: wrap;
 justify-content: center;
@@ -555,11 +557,30 @@ text-align: center;
   padding: 1% 0;
 }
 
+.rectangleNav ul .button {
+  /* margin-top: 2%; */
+ /* background-color: rgb(255, 243, 200); */
+  /* color: #000; */
+  border: 3px double transparent ;
+}
+
+.rectangleNav ul button:hover {
+  /* margin-top: 2%; */
+ background-color: rgb(255, 243, 200);
+  color: #000;
+  border: 3px double #000 ;
+}
+
+
+
+.rectangleNav ul .skills-button {
+  /* border: none;
+  color: white;
+  background-color: #005C89; */
+}
 
 .button {
-  border: none;
-  color: white;
-  background-color: #005C89;
+
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -567,6 +588,16 @@ text-align: center;
   font-size: 16px;
 
   cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #005C89;
+
+}
+
+.clicked-skills-button {
+  background-color: rgb(255, 243, 200);
+  color: #000;
+  border: 3px double #000!important ;
 }
 
 
@@ -645,7 +676,9 @@ Then all the elements will take an equal portion of the .parent element, but onl
 margin-top: 1.5%;
   /* flex: 90% 50%; */
   /* flex: 0 0 auto ; */
-background-color: #fea;
+  background-color: rgb(255, 243, 200);
+
+/* background-color: #fea; */
 border-right: #000;
 padding-top: 0;
 flex-shrink: 0;
@@ -695,7 +728,9 @@ max-width: 70%;
       margin-top: 2%;
       /* flex: 90% 50%; */
       /* flex: 0 0 auto ; */
-background-color: #fea;
+/* background-color: #fea; */
+background-color: rgb(255, 243, 200);
+
 border-right: #000;
 padding-top: 0;
 
@@ -760,7 +795,9 @@ text-align: center;
    margin-top: 1.5%;
       /* flex: 90% 50%; */
       /* flex: 0 0 auto ; */
-background-color: #fea;
+      background-color: rgb(255, 243, 200);
+
+/* background-color: #fea; */
 border-right: #000;
 padding-top: 0;
 flex-shrink: 0;
@@ -809,7 +846,9 @@ flex: 20% 200 0;
    margin-top: 2%;
       /* flex: 90% 50%; */
       /* flex: 0 0 auto ; */
-background-color: #fea;
+      background-color: rgb(255, 243, 200);
+
+/* background-color: #fea; */
 border-right: #000;
 padding-top: 0;
 
@@ -864,8 +903,8 @@ text-align: center;
    margin-top: 1.5%;
       /* flex: 90% 50%; */
       /* flex: 0 0 auto ; */
-background-color: #fea;
-border-right: #000;
+      background-color: rgb(255, 243, 200);
+      border-right: #000;
 padding-top: 0;
 flex-shrink: 0;
 /* 
@@ -952,7 +991,9 @@ min-height: 300px;
   /* margin-top: 2%; */
   /* flex: 90% 50%; */
   /* flex: 0 0 auto ; */
-background-color: #fea;
+  background-color: rgb(255, 243, 200);
+
+/* background-color: #fea; */
 border-right: #000;
 padding-top: 0;
 
@@ -973,9 +1014,9 @@ flex-direction: column;
 
 #container3Leadership p {
   /* border-top: double black 1px; */
-  height: 100%;
+  height: auto;
  font-size: 1em;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #leadership-image-wrapper {
@@ -1030,7 +1071,9 @@ object-fit: cover;
 
 
 .item {
-  border: 1px solid #DBAC34;
+ 
+  /* border: 1px solid #DBAC34; */
+  border: 1px solid  #005C89;;
 
   height: 100%;/* margin-top: 12vh; */
 place-items: center;
@@ -1113,9 +1156,9 @@ color: #f0f0f0;
 
 .blueBackground > div {
     display: grid;
-  border: 1px solid rgba(180, 37, 37, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.575);
     grid-template-columns: 1fr 6fr;
-
+border-radius: 4px;
     align-items: center;
     justify-content: center;
 /* width: 95%; */
@@ -1185,8 +1228,10 @@ place-items: center;
 }
 
 .container5 > div {
-  border: #DBAC34
-  solid 2px;
+  border: 1px solid rgba(255, 255, 255, 0.575);
+border-radius: 6px;
+  /* border: #DBAC34 */
+  /* solid 2px; */
   display: grid;
   /* grid-template-columns: 60% minmax(200px, 40%); */
 
@@ -1306,7 +1351,7 @@ width: 100%;
 #hamburger-menu-div {
     /* display: none; */
 
-  display: grid;
+  display: none;
   grid-template-rows: 1fr 5fr;
   position: absolute;
   background: #1b1b1b;
@@ -1379,7 +1424,7 @@ padding: 1vw;  }
   }
 
   .contact-form-outer-wrapper {
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    background-color: rgba(51, 47, 47, 0.514); /* Black background with opacity */
 
   }
   .contact-form--image{

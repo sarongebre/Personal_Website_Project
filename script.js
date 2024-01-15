@@ -278,21 +278,37 @@ function changeDiv(buttonId){
   document.getElementById("container3Design").style.display = "none";
   document.getElementById("container3Other").style.display = "none";
 
+  const buttons = document.querySelectorAll('.button');
+  buttons.forEach(button => button.classList.remove('clicked-skills-button'));
+
+
 
 if (buttonId == "Leadership") {
 document.getElementById("container3Leadership").style.display = "flex";
+// background-color: rgb(255, 243, 200);
+// color: #000;
+// border: 3px double #000 ;
+// document.getElementById("Leadership").style.backgroundColor = "pink";
+document.getElementById(buttonId).classList.add('clicked-skills-button');
+
 } 
 
 if (buttonId == "Programming") {
   document.getElementById("container3Programming").style.display = "flex";
+  document.getElementById(buttonId).classList.add('clicked-skills-button');
+
   } 
 
   if (buttonId == "Designing") {
     document.getElementById("container3Design").style.display = "flex";
+    document.getElementById(buttonId).classList.add('clicked-skills-button');
+
     } 
 
     if (buttonId == "Other") {
       document.getElementById("container3Other").style.display = "flex";
+      document.getElementById(buttonId).classList.add('clicked-skills-button');
+
       } 
 
 };

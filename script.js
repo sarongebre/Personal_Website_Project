@@ -78,6 +78,15 @@ function init(){
   var parent_width = element.offsetWidth;
 
   if (window.innerWidth <= 544) {
+
+    width = window.innerWidth
+    height = window.innerHeight
+    // update camera aspect
+    camera.aspect = width / height
+    camera.updateProjectionMatrix()
+    // update renderer
+    renderer.setSize(width, height)
+
     renderer.setSize(  parent_width + 100, parent_height + 100 );
     // console.log( parent_width + 50);
 
@@ -155,13 +164,13 @@ console.log("offsehandw" + parent_height);
   if (window.innerWidth <= 544) {
     object.scene.scale.set(.009,.007,.007);
     // console.log( parent_width + 50);
-    object.scene.position.y =  0; //Up and down
-    object.scene.position.x = -0.5; //Left and right
+    object.scene.position.y =  0; 
+    object.scene.position.x = 0; 
     object.scene.position.z = 1.3;
 
-    camera.position.x = -0.3;
-    camera.position.y = 1.15;
-    camera.position.z = 2.2;
+    // camera.position.x = -0.3;
+    // camera.position.y = 1.15;
+    // camera.position.z = 2.2;
 
 
     

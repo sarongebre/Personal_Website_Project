@@ -150,7 +150,17 @@ console.log("offsehandw" + parent_height);
     actions[0].play();
 		*/
 		//here ***
+
+    
+  if (window.innerWidth <= 544) {
+    object.scene.scale.set(.007,.007,.007);
+    // console.log( parent_width + 50);
+
+    
+  } else {
     object.scene.scale.set(.005,.0068,.007);
+
+  }
     // object.scale.setScalar(.007,.007,.007);
     // object.scene.position.y = -0.2 ; //Up and down
 

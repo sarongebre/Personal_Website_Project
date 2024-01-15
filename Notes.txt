@@ -60,3 +60,5 @@ Hamburger Menu icon by Icons8
 
 
 Add other menue link and add certifications, resume, and githuhb link 
+
+background for contac , awards, and scroll bar adjustion

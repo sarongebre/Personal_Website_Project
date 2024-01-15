@@ -153,7 +153,7 @@ console.log("offsehandw" + parent_height);
 
     
   if (window.innerWidth <= 544) {
-    object.scene.scale.set(.007,.007,.007);
+    object.scene.scale.set(.0075,.0075,.0075);
     // console.log( parent_width + 50);
 
     

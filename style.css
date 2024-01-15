@@ -21,7 +21,19 @@ body, html {
   color: azure; */
   height: 100%;
   scrollbar-width: thin;          /* "auto" or "thin" */
-  scrollbar-color: blue orange;   /* scroll thumb and track */
+}
+
+
+body::-webkit-scrollbar {
+  width: 11px;     
+  height: 0px;;
+  /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 255, 255);  
+  /* creates padding around scroll thumb */
 }
 
 html{scroll-behavior:smooth}
@@ -436,24 +448,15 @@ max-width: 100%;
 } */
 
 
-body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
-}
-body::-webkit-scrollbar-track {
-  background: rgb(206, 206, 206);        /* color of the tracking area */
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 0, 0);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
-}
+
 .introduction2{
+  scrollbar-width: thin;          /* "auto" or "thin" */
+
   overflow-y: scroll;
 scroll-padding: 0.1px;
 scroll-margin: 0.2px;
 
-  scrollbar-width: thin;          /* "auto" or "thin" */
-  scrollbar-color: blue orange;   /* scroll thumb and track */ 
+ 
 
             /* NEW */
 
@@ -499,8 +502,11 @@ z-index: 3;
 }
 
 
+
+
 .container3{
-  
+  scrollbar-width: thin;          /* "auto" or "thin" */
+
   width: auto; 
  
   height: 100%;
@@ -630,6 +636,10 @@ text-align: center;
 /* height: 50%; */
   /* height: fit-content; */
 /* max-height: 50%; */
+
+/* flex: 1 1 auto;
+}
+Then all the elements will take an equal portion of the .parent element, but only if */
   flex: 1 -1 auto;
 /* flex: 1;   */
 margin-top: 1.5%;
@@ -915,14 +925,16 @@ display:flex;
 /* justify-content:center; */
 
  /* flex-flow: row wrap; */
- column-gap: 1%;
+ /* column-gap: 1.5%; */
  /* column-gap: 2%; */
 
- row-gap: 1%;
+ /* row-gap: 7%; */
+ 
  display: flex;
  justify-content: center;
  align-items: center;
  text-align: center;
+ gap: 12px;
  /* very important */
  /* align-content: flex-start; */
  
@@ -933,7 +945,7 @@ display:flex;
   flex-shrink: 0;
 max-height: 300px;
 min-height: 300px;
-  flex: 25% 0 150;  
+  flex: 30% 0 150;  
  align-items: center;
 
 /* justify-content:center; */
@@ -994,6 +1006,8 @@ object-fit: cover;
 } */
 
 .container4{
+  scrollbar-width: thin;          /* "auto" or "thin" */
+
   position: static;
   width: 100%; 
   /* height: 820px;  */
@@ -1174,7 +1188,9 @@ place-items: center;
   border: #DBAC34
   solid 2px;
   display: grid;
-  grid-template-columns: 60% minmax(200px, 40%);
+  /* grid-template-columns: 60% minmax(200px, 40%); */
+
+  grid-template-columns: 60% 40%;
   align-items: center;
   justify-content: center;  
   /* height: 100%; */
@@ -1198,6 +1214,11 @@ place-items: center;
 }
 
 .contact-form-wrapper > div {
+
+ 
+    margin: auto;
+       width: 80%;
+       display: grid;
 
   /* padding: 50px 50px; */
  margin-bottom: 1%;
@@ -1238,7 +1259,7 @@ width: 45em;
 } */
 
 textarea {
-  width: 60%;
+  width: 80%;
   height: 15em;
   margin-bottom: 1.5em ;
 
@@ -1259,12 +1280,14 @@ textarea {
 
 text-align: center;
 padding: 15px 25px;
-width: auto;
+width: 80%;
 }
 
 .contact-form-img {
   max-width: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   /* width: 100%; */
 }
@@ -1272,7 +1295,7 @@ width: auto;
 .contact-form-img-wrapper {
 /* max-height: 100%; */
 overflow: hidden;
-/* height: 100%; */
+height: 100%;
 width: 100%;
 }
 
@@ -1349,6 +1372,94 @@ padding: 1vw;  }
 /* 880px */
 @media screen and (max-width: 55em) {
 
+  .container5 {
+    background-image: url("contact-us-one.jpg"); 
+    background-size: cover;
+
+  }
+
+  .contact-form-outer-wrapper {
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+
+  }
+  .contact-form--image{
+}
+
+  .contact-form-img-wrapper {
+    display: none;
+  }
+
+  .container5 > div {
+    display: block;
+    width: 80%;
+    
+  }
+
+  .contact-form-wrapper > div {
+ margin: auto;
+    width: 80%;
+    display: grid;
+    }
+
+    .contact-form-wrapper p {
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+      display: flex;
+         }
+
+  .container5 textarea {
+    width: 90%;
+  }
+
+
+  .container4 {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 8fr;
+  }
+  .item fieldset  {
+      display: flex ;
+      flex-direction: row;
+      justify-content: space-evenly;
+      /* justify-content: center; */
+      text-align: center;
+  }
+
+ 
+
+  /* .item fieldset input,  .item fieldset label {
+    display: inline-block ;
+} */
+  .blueBackground  {
+
+    grid-template-columns: auto auto;
+    width: 80%;
+    margin: 0 auto;
+    
+    align-items: stretch;
+}
+
+.blueBackground > div {
+
+  grid-template-columns: unset;
+align-items: first baseline;
+display: block;
+}
+
+
+  #container3Leadership {
+    flex-wrap: wrap ;
+
+flex-direction: column;
+/* width: 50%; */
+/* flex-direction: ; */
+padding: 0 10%;
+
+  }
+
+  #container3Leadership div {
+  }
+
+
   .introduction{
   
     top: -10%;
@@ -1415,6 +1526,19 @@ width: 80%;
     /* left: 67%; */
     
     }
+
+    #container3Leadership {
+      font-size: 0.8em;
+
+  
+    }
+  
+    .item fieldset div {
+font-size: 0.8em;  }
+.blueBackground p {
+  font-size: 0.8em;
+}
+
  
 }
 

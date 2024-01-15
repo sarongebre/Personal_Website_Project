@@ -75,9 +75,18 @@ function init(){
 
   const element = document.getElementById("canvas-wrapper");
   parent_height = element.offsetHeight;
-  parent_width = element.offsetWidth;
+  var parent_width = element.offsetWidth;
 
-  renderer.setSize(  parent_width, parent_height );
+  if (window.innerWidth <= 544) {
+    renderer.setSize(  parent_width + 50, parent_height + 50 );
+    // console.log( parent_width + 50);
+
+    
+  } else {
+    renderer.setSize(  parent_width , parent_height );
+
+  }
+
 console.log("offsehandw" + parent_height);
   // renderer.setSize(  550, 550 );
   sceneSurface.appendChild(renderer.domElement);

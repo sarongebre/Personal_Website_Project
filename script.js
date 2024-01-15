@@ -215,13 +215,37 @@ window.addEventListener('resize', () => {
     renderer.setSize(parent_width,parent_height)
 
   // renderer.setSize(window.innerWidth/2.5,parent_height)
-  
+  if (window.innerWidth <= 544) {
+
+    width = window.innerWidth
+    height = window.innerHeight
+    // update camera aspect
+    camera.aspect = width / height
+    camera.updateProjectionMatrix()
+    
+
+    renderer.setSize(  parent_width + 100, parent_height + 100 );
+
+    object.scene.scale.set(.009,.007,.007);
+    // console.log( parent_width + 50);
+    object.scene.position.y =  0; 
+    object.scene.position.x = 0; 
+    object.scene.position.z = 1.3;
+    // console.log( parent_width + 50);
+
+    
+  } 
+
+
+
   renderer.render(scene, camera)
   // object.scene.scale.set(0.1,.5,.7);
   globalObject.scene.scale.set(.009,.007,.007);
 
 
   // console.log(parent_height);
+
+
 })
 
 function playAction(index){

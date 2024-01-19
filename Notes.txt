@@ -61,4 +61,23 @@ Hamburger Menu icon by Icons8
 
 Add other menue link and add certifications, resume, and githuhb link 
 
-background for contac , awards, and scroll bar adjustion
+background for contac , awards, and scroll bar adjustion, maybe add gspa or another framwork for animatiom
+
+change background, add clifton strength
+
+
+  <!-- Relaxed, handwriting font style
+  https://fonts.google.com/specimen/Preahvihear
+  https://fonts.google.com/specimen/Merienda
+  https://fonts.google.com/specimen/Handlee
+  https://fonts.google.com/specimen/Caveat -->
+    <!-- to add- unofficial transcript, resume, uploud all certificates(includes HS)-->
+
+      <!-- <div class="projectItem designs">
+        <div > <img src="figma.png" style="width: 100% ;"> </img> </div>
+        <p> Healing Arts mobile app prototype design For UNMC  <a  href="https://www.figma.com/file/wjj97CPTonxwzAEftUHtlc/Healing-Arts-App-Prototype-06%2F17%2F2022?type=design&mode=design&t=NxLOgyNsuZj2vhvb-1"> View design on figma </a>
+          and <a href="https://invis.io/XK12SL5BD7YG"> view interactive mobile app design  on Invision </a>
+        </p>
+      </div> -->
+      
+      Use var for some of the colors you have been using

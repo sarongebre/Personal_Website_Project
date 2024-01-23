@@ -132,28 +132,28 @@ function update() {
 
 
 function changeDiv(buttonId) {
-  document.getElementById("container3Leadership").style.display = "none";
-  document.getElementById("container3Programming").style.display = "none";
-  document.getElementById("container3Design").style.display = "none";
-  document.getElementById("container3Other").style.display = "none";
+  document.getElementById("container3-leadership").style.display = "none";
+  document.getElementById("container3-programming").style.display = "none";
+  document.getElementById("container3-design").style.display = "none";
+  document.getElementById("container3-other").style.display = "none";
 
   const buttons = document.querySelectorAll(".button");
   buttons.forEach((button) => button.classList.remove("clicked-skills-button"));
 
   if (buttonId == "Leadership") {
-    document.getElementById("container3Leadership").style.display = "flex";
+    document.getElementById("container3-leadership").style.display = "flex";
     document.getElementById(buttonId).classList.add("clicked-skills-button");
   }
   if (buttonId == "Programming") {
-    document.getElementById("container3Programming").style.display = "flex";
+    document.getElementById("container3-programming").style.display = "flex";
     document.getElementById(buttonId).classList.add("clicked-skills-button");
   }
   if (buttonId == "Designing") {
-    document.getElementById("container3Design").style.display = "flex";
+    document.getElementById("container3-design").style.display = "flex";
     document.getElementById(buttonId).classList.add("clicked-skills-button");
   }
   if (buttonId == "Other") {
-    document.getElementById("container3Other").style.display = "flex";
+    document.getElementById("container3-other").style.display = "flex";
     document.getElementById(buttonId).classList.add("clicked-skills-button");
   }
 }

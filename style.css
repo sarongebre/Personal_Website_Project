@@ -93,11 +93,7 @@ nav .menu {
   z-index: 13;
 }
 
-#folderText {
-  display: none;
-}
-
-.menu .logoPic {
+.menu .logo-pic {
   margin: 0px;
   width: 10%;
   padding: 0px;
@@ -171,9 +167,6 @@ nav .menu {
   vertical-align: middle;
 }
 
-canvas {
-}
-
 #canvas {
   width: 100%;
   height: 100%;
@@ -221,7 +214,7 @@ canvas {
   font-family: "Kalam", cursive;
 }
 
-.container2background {
+.container2-background {
   width: auto;
   height: 100%;
   background-color: #ffffff;
@@ -285,7 +278,7 @@ canvas {
   text-align: center;
 }
 
-.rectangleNav {
+.container3-nav-bar {
   margin-top: 3%;
   margin-bottom: auto;
   margin-left: auto;
@@ -298,7 +291,7 @@ canvas {
   text-align: center;
 }
 
-.rectangleNav ul {
+.container3-nav-bar ul {
   list-style: none;
   column-gap: 6vw;
   max-width: 100%;
@@ -313,15 +306,15 @@ canvas {
   margin-block-end: 0px;
 }
 
-.rectangleNav ul li {
+.container3-nav-bar ul li {
   padding: 1% 0;
 }
 
-.rectangleNav ul .button {
+.container3-nav-bar ul .button {
   border: 3px double transparent;
 }
 
-.rectangleNav ul button:hover {
+.container3-nav-bar ul button:hover {
   background-color: rgb(255, 243, 200);
   color: #000;
   border: 3px double #000;
@@ -344,7 +337,7 @@ canvas {
   border: 3px double #000 !important ;
 }
 
-.whiteBackground {
+.container3-skills-block {
   height: 70%;
   width: 80%;
   background-color: white;
@@ -355,12 +348,7 @@ canvas {
   overflow-y: auto;
 }
 
-.introduction_3 {
-  height: auto;
-  max-height: 100%;
-}
-
-#container3Programming {
+#container3-programming {
   display: none;
   margin-top: 0.5%;
   text-align: center;
@@ -371,7 +359,7 @@ canvas {
   align-items: center;
   text-align: center;
 }
-#container3Programming div {
+#container3-programming div {
   width: 20%;
   min-width: 200px;
   max-width: 300px;
@@ -393,30 +381,12 @@ Then all the elements will take an equal portion of the .parent element, but onl
   display: flex;
 }
 
-#container3Programming img {
+#container3-programming img {
   max-width: 70%;
   border-style: double;
 }
 
-#container3Programmingoff {
-  display: none;
-  margin-top: 1%;
-  text-align: center;
-  flex-flow: row wrap;
-  column-gap: 2%;
-}
-#container3Programmingoff * {
-  flex: 20% 200 0;
-  margin-top: 2%;
-  background-color: rgb(255, 243, 200);
-  border-right: #000;
-  padding-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-}
-
-#container3Design {
+#container3-design {
   display: none;
   margin-top: 0.5%;
   text-align: center;
@@ -428,7 +398,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
   text-align: center;
 }
 
-#container3Design div {
+#container3-design div {
   width: 20%;
   min-width: 200px;
   max-width: 300px;
@@ -446,36 +416,17 @@ Then all the elements will take an equal portion of the .parent element, but onl
   display: flex;
 }
 
-#container3Other img {
+#container3-other img {
   max-width: 70%;
   border-style: double;
 }
 
-#container3Designoff {
-  display: none;
-  margin-top: 1%;
-  text-align: center;
-  flex-flow: row wrap;
-  column-gap: 2%;
-}
-
-#container3Designoff * {
-  flex: 20% 200 0;
-  margin-top: 2%;
-  background-color: rgb(255, 243, 200);
-  border-right: #000;
-  padding-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: double;
-}
-
-#container3Design img {
+#container3-design img {
   max-width: 70%;
   border-style: double;
 }
 
-#container3Other {
+#container3-other {
   display: none;
   margin-top: 0.5%;
   text-align: center;
@@ -487,7 +438,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
   text-align: center;
 }
 
-#container3Other div {
+#container3-other div {
   width: 20%;
   min-width: 200px;
   max-width: 300px;
@@ -505,12 +456,12 @@ Then all the elements will take an equal portion of the .parent element, but onl
   display: flex;
 }
 
-#container3Other img {
+#container3-other img {
   max-width: 70%;
   border-style: double;
 }
 
-#container3Leadership {
+#container3-leadership {
   flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 2%;
@@ -522,7 +473,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
   gap: 12px;
 }
 
-#container3Leadership div {
+#container3-leadership div {
   flex-shrink: 0;
   max-height: 300px;
   min-height: 300px;
@@ -537,7 +488,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
   flex-direction: column;
 }
 
-#container3Leadership p {
+#container3-leadership p {
   height: auto;
   font-size: 1em;
   overflow-y: auto;
@@ -550,7 +501,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
   display: flex;
 }
 
-#container3Leadership img {
+#container3-leadership img {
   overflow-y: hidden;
   max-width: 100%;
   width: 100%;
@@ -574,7 +525,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
   padding: 2em 0;
 }
 
-.item {
+.container4-filter-block {
   border: 1px solid #005c89;
   height: 100%;
   place-items: center;
@@ -583,13 +534,13 @@ Then all the elements will take an equal portion of the .parent element, but onl
   flex-direction: column;
 }
 
-.item fieldset {
+.container4-filter-block fieldset {
   width: 100%;
   height: 100%;
   min-inline-size: unset;
 }
 
-.item fieldset div {
+.container4-filter-block fieldset div {
   width: 100%;
   margin-top: 1em;
 }
@@ -602,14 +553,11 @@ Then all the elements will take an equal portion of the .parent element, but onl
   width: 100%;
 }
 
-#project-type-wrapper label {
-}
-
 #coding-projects-list-form {
   width: 100%;
 }
 
-.blueBackground {
+.container4-projects-block {
   background-color: #005c89;
   /* center besides using flex*/
   /* margin-bottom: auto;
@@ -624,7 +572,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
   color: #f0f0f0;
 }
 
-.blueBackground > div {
+.container4-projects-block > div {
   display: grid;
   border: 1px solid rgba(255, 255, 255, 0.575);
   grid-template-columns: 1fr 6fr;
@@ -633,15 +581,15 @@ Then all the elements will take an equal portion of the .parent element, but onl
   justify-content: center;
 }
 
-.blueBackground p {
+.container4-projects-block p {
   padding: 0px 3%;
 }
 
-.blueBackground a {
+.container4-projects-block a {
   color: lightgray;
 }
 
-.projectItem > div {
+.project-item > div {
   background-color: rgba(240, 240, 240, 0.911);
 }
 
@@ -770,9 +718,8 @@ textarea {
   .menu .hamburger-icon {
     display: block;
   }
-  .rectangleNav {
-  }
-  .rectangleNav .button {
+
+  .container3-nav-bar .button {
     padding: 1vw;
   }
   .menu .logoPic {
@@ -833,14 +780,14 @@ textarea {
     grid-template-columns: unset;
     grid-template-rows: 1fr 8fr;
   }
-  .item fieldset {
+  .container4-filter-block fieldset {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
   }
 
-  .blueBackground {
+  .container4-projects-block {
     grid-template-columns: auto auto;
     width: 80%;
     margin: 0 auto;
@@ -848,21 +795,16 @@ textarea {
     align-items: stretch;
   }
 
-  .blueBackground > div {
+  .container4-projects-block > div {
     grid-template-columns: unset;
     align-items: first baseline;
     display: block;
   }
 
-  #container3Leadership {
+  #container3-leadership {
     flex-wrap: wrap;
-
     flex-direction: column;
-
     padding: 0 10%;
-  }
-
-  #container3Leadership div {
   }
 
   .introduction {
@@ -910,14 +852,14 @@ textarea {
     left: 100%;
   }
 
-  #container3Leadership {
+  #container3-leadership {
     font-size: 0.8em;
   }
 
-  .item fieldset div {
+  .container4-filter-block fieldset div {
     font-size: 0.8em;
   }
-  .blueBackground p {
+  .container4-projects-block p {
     font-size: 0.8em;
   }
 }

@@ -736,7 +736,7 @@ textarea {
 /* 880px */
 @media screen and (max-width: 55em) {
   .container5 {
-    background-image: url("contact-us-one.jpg");
+    background-image: url("images/contact-us-one.jpg");
     background-size: cover;
   }
   .contact-form-outer-wrapper {
@@ -827,7 +827,7 @@ textarea {
     width: 100%;
     z-index: 2;
     padding-right: 20%;
-    background-image: url("saron_standing.jpg");
+    background-image: url("images/saron_standing.jpg");
     background-size: cover;
     filter: blur(0.5px);
   }

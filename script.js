@@ -203,7 +203,7 @@ function displayCheck(selectValue) {
 document
   .querySelector("#project-type-wrapper")
   .addEventListener("change", function (e) {
-    const allProjects = document.querySelectorAll(".projectItem");
+    const allProjects = document.querySelectorAll(".project-item");
 
     const projectRadioButtons = document.querySelectorAll(
       'input[name="projects"]'

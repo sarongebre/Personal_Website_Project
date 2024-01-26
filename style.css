@@ -65,13 +65,31 @@ nav .menu {
   justify-content: space-between;
   padding-right: 0px;
 }
-.menu .logo {
+.menu .logo-wrapper {
+  /* flex: 1; */
   text-decoration: none;
   color: #fff;
   font-size: 35px;
   font-weight: 600;
   padding-bottom: 0px;
   margin: 0px;
+  /* width:10%; */
+}
+
+.menu-wrapper {
+  /* flex: 5; */
+}
+
+.menu .logo-pic {
+  margin: 0px;
+  /* width: 10%; */
+  padding: 0px;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
 }
 
 .menu .hamburger-icon {
@@ -93,16 +111,7 @@ nav .menu {
   z-index: 13;
 }
 
-.menu .logo-pic {
-  margin: 0px;
-  width: 10%;
-  padding: 0px;
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 800px;
-  max-height: 100px;
-}
+
 .menu-list-wrapper {
   display: inline-flex;
   flex-wrap: wrap;

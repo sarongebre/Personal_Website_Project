@@ -136,7 +136,7 @@ nav .menu {
 
 #hamburger-menu-div li a {
   text-decoration: none;
-  color: #005c89;
+  color:  rgba(204, 204, 204, 0.911);
   font-family: "Satisfy";
   background-color: #000;
   font-size: 1em;
@@ -153,7 +153,9 @@ nav .menu {
 }
 .menu-list-wrapper li a {
   text-decoration: none;
-  color: #005c89;
+ 
+  /* color: #005c89; */
+  color:  rgba(204, 204, 204, 0.911);
   font-family: "Satisfy";
   letter-spacing: 4px;
   background-color: #000;
@@ -676,6 +678,7 @@ textarea {
   text-align: center;
   padding: 15px 25px;
   width: 80%;
+  cursor: pointer;
 }
 
 .contact-form-img {

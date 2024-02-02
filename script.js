@@ -160,7 +160,7 @@ function changeDiv(buttonId) {
 
 
 function displayCheck(selectValue) {
-  const ProjectItems = document.querySelectorAll(".projectItem");
+  const ProjectItems = document.querySelectorAll(".project-item ");
   ProjectItems.forEach((projectItem) => {
     projectItem.style.display = "none";
   });

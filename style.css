@@ -709,6 +709,42 @@ textarea {
   z-index: 1;
 }
 
+footer {
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-wrapperr {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-wrapper a {
+  margin: 0 10px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #fff; 
+  border-radius: 50%; 
+  background-color: #555; 
+  line-height: 48px; 
+}
+
+.icon-wrapper i {
+  font-size: 20px; 
+}
+
+.copyright {
+  margin-top: 15px;
+}
+
 
 /* ----------Media Queries--------------  */
 
@@ -875,3 +911,4 @@ textarea {
     font-size: 0.8em;
   }
 }
+

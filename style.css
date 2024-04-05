@@ -12,6 +12,10 @@
   letter-spacing: 0.1em;
 }
 
+:root {
+  --skills-block: RGB(255, 253, 208);
+  --white: #ffffff;
+}
 /*sections */
 body,
 html {
@@ -158,10 +162,10 @@ nav .menu {
   color:  rgba(204, 204, 204, 0.911);
   font-family: "Satisfy";
   letter-spacing: 4px;
-  background-color: #000;
+  /* background-color: #504e4e9f; */
   font-size: 1.5em;
   font-weight: bold;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
   border-radius: 0.4em;
   transition: all 0.3s ease;
 }
@@ -295,12 +299,13 @@ nav .menu {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
+  background-color:  rgba(255, 255, 255, 0.849);
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+  height: 10%;}
 
 .container3-nav-bar ul {
   list-style: none;
@@ -318,21 +323,24 @@ nav .menu {
 }
 
 .container3-nav-bar ul li {
-  padding: 1% 0;
+  padding: 1% 4%;
+  background-color: #005c89;
+
 }
 
 .container3-nav-bar ul .button {
-  border: 3px double transparent;
+  border: 3px solid transparent;
 }
 
 .container3-nav-bar ul button:hover {
-  background-color: rgb(255, 243, 200);
+  /* background-color: rgb(255, 243, 200); */
+  background-color: var(--skills-block);
   color: #000;
-  border: 3px double #000;
+  border: 3px solid #000;
 }
 
 .button {
-  padding: 15px 32px;
+  /* padding: 15% 20%; */
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -345,13 +353,13 @@ nav .menu {
 .clicked-skills-button {
   background-color: rgb(255, 243, 200);
   color: #000;
-  border: 3px double #000 !important ;
+  border: 1px solid #000 !important ;
 }
 
 .container3-skills-block {
   height: 70%;
-  width: 80%;
-  background-color: white;
+  width: 96%;
+  background-color: rgba(255, 255, 255, 0.849);
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
@@ -359,6 +367,11 @@ nav .menu {
   overflow-y: auto;
 }
 
+.container3-skills-block div {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  /* overflow-y: auto; */
+
+  /* height: 100%; */
+}
 #container3-programming {
   display: none;
   margin-top: 0.5%;
@@ -381,11 +394,11 @@ Then all the elements will take an equal portion of the .parent element, but onl
   flex: 1 -1 auto;
   /* flex: 1;   */
   margin-top: 1.5%;
-  background-color: rgb(255, 243, 200);
+  background-color: var(--skills-block);
   border-right: #000;
   padding-top: 0;
   flex-shrink: 0;
-  border-style: double;
+  /* border-style: double; */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -394,7 +407,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
 
 #container3-programming img {
   max-width: 70%;
-  border-style: double;
+  /* border-style: double; */
 }
 
 #container3-design {
@@ -416,11 +429,11 @@ Then all the elements will take an equal portion of the .parent element, but onl
   min-height: 200px;
   flex: 1 -1 auto;
   margin-top: 1.5%;
-  background-color: rgb(255, 243, 200);
+  background-color: var(--skills-block);
   border-right: #000;
   padding-top: 0;
   flex-shrink: 0;
-  border-style: double;
+  /* border-style: double; */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -429,12 +442,12 @@ Then all the elements will take an equal portion of the .parent element, but onl
 
 #container3-other img {
   max-width: 70%;
-  border-style: double;
+  /* border-style: double; */
 }
 
 #container3-design img {
   max-width: 70%;
-  border-style: double;
+  /* border-style: double; */
 }
 
 #container3-other {
@@ -456,11 +469,11 @@ Then all the elements will take an equal portion of the .parent element, but onl
   min-height: 200px;
   flex: 1 -1 auto;
   margin-top: 1.5%;
-  background-color: rgb(255, 243, 200);
+  background-color:var(--skills-block);
   border-right: #000;
   padding-top: 0;
   flex-shrink: 0;
-  border-style: double;
+  /* border-style: double; */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -469,7 +482,7 @@ Then all the elements will take an equal portion of the .parent element, but onl
 
 #container3-other img {
   max-width: 70%;
-  border-style: double;
+  /* border-style: double; */
 }
 
 #container3-leadership {
@@ -481,32 +494,34 @@ Then all the elements will take an equal portion of the .parent element, but onl
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 12px;
+  gap: 40px;
 }
+
+
 
 #container3-leadership div {
   flex-shrink: 0;
-  max-height: 300px;
+  max-height: 400px;
   min-height: 300px;
   flex: 30% 0 150;
   align-items: center;
-  background-color: rgb(255, 243, 200);
+  background-color:var(--skills-block);
   border-right: #000;
   padding-top: 0;
-  border-style: double;
-  height: auto;
-  display: flex;
-  flex-direction: column;
+  /* border-style: solid; */
+
+
 }
 
 #container3-leadership p {
-  height: auto;
-  font-size: 1em;
   overflow-y: auto;
+
+  max-height: 50%;
+  font-size: 1em;
 }
 
 #leadership-image-wrapper {
-  border-bottom: double black 1px;
+  /* border-bottom: double black 1px; */
   max-width: 10%;
   max-height: 20%;
   display: flex;
@@ -628,10 +643,14 @@ Then all the elements will take an equal portion of the .parent element, but onl
   margin: auto;
   min-height: 0;
   min-width: 0;
+  height: 100%;
+
+  
 }
 
 .contact-form-outer-wrapper {
-  height: auto;
+  height: 100%;
+  overflow: auto;
 }
 
 .contact-form-wrapper > div {
@@ -639,11 +658,15 @@ Then all the elements will take an equal portion of the .parent element, but onl
   width: 80%;
   display: grid;
   margin-bottom: 1%;
+  /* height: 100%; */
+/* height: min-content; */
 }
 
 .contact-form-wrapper {
   color: #f0f0f0;
   height: auto;
+  height: 100%;
+
 }
 
 .form-attributes,
@@ -655,12 +678,12 @@ textarea,
 
 form {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 textarea {
   width: 80%;
-  height: 15em;
+  height: 12em;
   margin-bottom: 1.5em;
 }
 
@@ -708,6 +731,10 @@ textarea {
   width: 22%;
   z-index: 1;
 }
+.contact-form--image {
+  height: 100%;
+}
+
 
 footer {
   background-color: #1b1b1b;

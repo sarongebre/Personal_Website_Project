@@ -137,24 +137,24 @@ function changeDiv(buttonId) {
   document.getElementById("container3-design").style.display = "none";
   document.getElementById("container3-other").style.display = "none";
 
-  const buttons = document.querySelectorAll(".button");
+  const buttons = document.querySelectorAll(".button-list");
   buttons.forEach((button) => button.classList.remove("clicked-skills-button"));
 
   if (buttonId == "Leadership") {
     document.getElementById("container3-leadership").style.display = "flex";
-    document.getElementById(buttonId).classList.add("clicked-skills-button");
+    document.getElementById("leadership-button-list").classList.add("clicked-skills-button");
   }
   if (buttonId == "Programming") {
     document.getElementById("container3-programming").style.display = "flex";
-    document.getElementById(buttonId).classList.add("clicked-skills-button");
+    document.getElementById("programming-button-list").classList.add("clicked-skills-button");
   }
   if (buttonId == "Designing") {
     document.getElementById("container3-design").style.display = "flex";
-    document.getElementById(buttonId).classList.add("clicked-skills-button");
+    document.getElementById("skills-button-list").classList.add("clicked-skills-button");
   }
   if (buttonId == "Other") {
     document.getElementById("container3-other").style.display = "flex";
-    document.getElementById(buttonId).classList.add("clicked-skills-button");
+    document.getElementById("other-button-list").classList.add("clicked-skills-button");
   }
 }
 

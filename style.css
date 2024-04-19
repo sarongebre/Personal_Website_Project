@@ -320,25 +320,25 @@ nav .menu {
   padding-inline-start: 0px;
   margin-block-start: 0px;
   margin-block-end: 0px;
+  height: 100%;
 }
 
 .container3-nav-bar ul li {
-  padding: 1% 4%;
   background-color: #005c89;
+  border: 7px solid transparent;
+  height: 50%;
+  width: 12%;
 
 }
 
 .container3-nav-bar ul .button {
-  border: 3px solid transparent;
 }
 
-.container3-nav-bar ul button:hover {
-  /* background-color: rgb(255, 243, 200); */
-  background-color: var(--skills-block);
-  color: #000;
-  border: 3px solid #000;
-}
+.container3-nav-bar ul li:hover {
 
+  border: 7px solid;
+  border-color:var(--skills-block) ;
+  box-shadow: 0 0.6em 0.5em -0.1em black;}
 .button {
   /* padding: 15% 20%; */
   text-align: center;
@@ -348,12 +348,15 @@ nav .menu {
   border: none;
   color: white;
   background-color: #005c89;
+  width: 100%;
+  height: 100%;
 }
 
 .clicked-skills-button {
-  background-color: rgb(255, 243, 200);
-  color: #000;
-  border: 1px solid #000 !important ;
+  border: 5px solid;
+  border-color:var(--skills-block) !important ;
+  box-shadow: 0 0.6em 0.5em -0.1em black;
+  transform: translateY(-0.25em);
 }
 
 .container3-skills-block {

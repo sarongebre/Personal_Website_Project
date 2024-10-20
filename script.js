@@ -141,19 +141,19 @@ function changeDiv(buttonId) {
   buttons.forEach((button) => button.classList.remove("clicked-skills-button"));
 
   if (buttonId == "Leadership") {
-    document.getElementById("container3-leadership").style.display = "flex";
+    document.getElementById("container3-leadership").style.display = "grid";
     document.getElementById("leadership-button-list").classList.add("clicked-skills-button");
   }
   if (buttonId == "Programming") {
-    document.getElementById("container3-programming").style.display = "flex";
+    document.getElementById("container3-programming").style.display = "grid";
     document.getElementById("programming-button-list").classList.add("clicked-skills-button");
   }
   if (buttonId == "Designing") {
-    document.getElementById("container3-design").style.display = "flex";
+    document.getElementById("container3-design").style.display = "grid";
     document.getElementById("skills-button-list").classList.add("clicked-skills-button");
   }
   if (buttonId == "Other") {
-    document.getElementById("container3-other").style.display = "flex";
+    document.getElementById("container3-other").style.display = "grid";
     document.getElementById("other-button-list").classList.add("clicked-skills-button");
   }
 }

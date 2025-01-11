@@ -21,6 +21,7 @@ body,
 html {
   height: 100%;
   scrollbar-width: thin; /* "auto" or "thin" */
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -51,14 +52,17 @@ html {
 }
 
 nav {
-  position: absolute;
+  /* position: absolute; */
   background: #1b1b1b;
-  width: 100vw;
+  width: 100%;
   margin-top: 0px;
   margin-bottom: 0px;
   z-index: 12;
   padding-bottom: 0px;
   padding-top: 0px;
+    /* max-width: 100vw; */
+    box-sizing: border-box
+
 }
 nav .menu {
   max-width: 98%;
@@ -81,6 +85,7 @@ nav .menu {
 }
 
 .menu-wrapper {
+  
   /* flex: 5; */
 }
 
@@ -106,7 +111,7 @@ nav .menu {
   position: absolute;
   height: 100%;
   width: 100%;
-  right: 0px;
+  /* right: 0px; */
   z-index: 0;
   opacity: 0;
 }
@@ -123,6 +128,7 @@ nav .menu {
 .menu-list-wrapper li {
   list-style: none;
   margin-left: 0.5em;
+  
 }
 
 #hamburger-menu-div ul {
@@ -176,17 +182,32 @@ nav .menu {
 }
 
 .container {
-  width: auto;
+  width: 100%;
   height: 100%;
   background-color: #005c89;
   vertical-align: middle;
 }
 
-#canvas {
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 50px 50px;
+.canvas {
+  position: relative;
+  z-index: 1;
+  border: none !important;
+  background: radial-gradient(circle at 50% 70%, 
+    rgba(0, 92, 137, 0.3) 0%, 
+    transparent 60%);
+}
+
+/*  glow effect */
+.canvas::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  box-shadow: 0 0 100px rgba(0, 92, 137, 0.2);
+  z-index: 0;
 }
 
 #canvas-wrapper {
@@ -204,6 +225,7 @@ nav .menu {
 }
 
 .canvas-outer-wrapper {
+  /* position: relative; */
   display: flex;
   justify-content: center;
   height: 100%;
@@ -212,21 +234,177 @@ nav .menu {
   text-align: center;
 }
 
-.introduction {
-  background-color: #fff;
-  border-radius: 70px 70px;
+#canvas-wrapper {
+  position: relative;
+  min-height: 400px;
+}
+
+.canvas-controls {
   position: absolute;
-  top: -9%;
-  left: 55%;
-  width: 35%;
-  font-size: 18px;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.canvas-controls:hover {
+  opacity: 1;
+}
+
+.interaction-hint {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.8; }
+}
+
+.canvas-border {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 40px;
+  bottom: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  /* border-right-height: 50%; */
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* */
+/* .canvas-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+} */
+
+/* Add subtle glow effect around canvas */
+#canvas::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 50px rgba(0, 92, 137, 0.3);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.introduction {
+  position: absolute;
+  /* left: 0vw;
+  top: -3.5vw; */
+  left: 1%;
+  top: -10%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 40px;
+  max-width: 25%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+/* Bubble styling */
+.bubble1, .bubble2, .bubble3, .bubble4 {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.bubble1 {
+  width: 5.4%;
+  height: 9%;
+  right: -1vw;
+  top: 46%;
+  /* right: -7%; */
+}
+
+.bubble2 {
+  width: 3.5%;
+  height: 5.6%;
+  /* right: -24%; */
+  right: -3.5vw;
+  top: 48%;
+}
+
+.bubble3 {
+  width: 2.5%;
+  height: 3.8%;
+  /* right: -38%; */
+  right: -5.5vw;
+  top: 60%;
+}
+
+.bubble4 {
+  width: 1.5%;
+  height: 2.5%;
+  /* right: -50%; */
+  right: -7vw;
+  top: 75%;
+}
+
+/* Animation for all bubbles */
+.bubble1, .bubble2, .bubble3, .bubble4 {
+  animation: floatAndGrow 3s ease-in-out infinite;
+}
+
+@keyframes floatAndGrow {
+  0%, 100% { 
+    transform: translate(0, 0) scale(0.7); 
+    opacity: 0.5; 
+  }
+  50% { 
+    transform: translate(5px, -5px) scale(1.2);
+    opacity: 1; 
+  }
 }
 
 .introduction p {
-  height: auto;
-  padding: 1em;
-  font-weight: 900;
-  font-family: "Kalam", cursive;
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+.introduction {
+  animation: float 3s ease-in-out infinite;
 }
 
 .container2-background {
@@ -237,7 +415,7 @@ nav .menu {
 
 .container2 {
   display: flex;
-  column-gap: 5em;
+  column-gap: 1em;
   flex-direction: row;
   position: relative;
   height: 100%;
@@ -256,33 +434,118 @@ nav .menu {
 }
 
 .introduction2 {
-  scrollbar-width: thin; /* "auto" or "thin" */
-  overflow-y: scroll;
-  scroll-padding: 0.1px;
-  scroll-margin: 0.2px;
-  text-align: center;
-  background-color: #005c89;
+  padding: 30px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: AUTO;
+  /* overflow-y: scroll; */
+  /* max-height: 100%; */
   height: auto;
-  max-height: 60%;
+  overflow-y: auto;
   width: 50%;
-  border-radius: 50px;
-  align-self: center;
-  padding: 1em 0;
-  z-index: 3;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 30px rgba(0, 92, 137, 0.1),
+    0 1px 8px rgba(0, 92, 137, 0.05);
+
+    /* scrollbar-width: thin;
+    overflow-y: scroll;
+    scroll-padding: 0.1px;
+    scroll-margin: 0.2px;
+    text-align: center; */
+    /* background-color: #005c89; */
+    height: auto;
+    max-height: 80%;
+    width: 50%;
+    /* border-radius: 50px; */
+    align-self: center;
+    padding: 1em 0;
+    /* z-index: 3; */
 }
 
-.introduction2 p {
-  text-align: left;
-  color: #ffffff;
-  font-size: 1.1em;
-  padding: 0.5em 1.5em;
+/* Custom scrollbar styling */
+.introduction2::-webkit-scrollbar {
+  width: 8px;
+}
+
+.introduction2::-webkit-scrollbar-track {
+  background: rgba(0, 92, 137, 0.05);
+  border-radius: 10px;
+}
+
+.introduction2::-webkit-scrollbar-thumb {
+  background: rgba(0, 92, 137, 0.2);
+  border-radius: 10px;
+}
+
+.introduction2::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 92, 137, 0.3);
 }
 
 .introduction2 h2 {
-  color: #ffffff;
-  font-size: 1.4em;
-  text-decoration: dashed underline greenyellow;
-  text-decoration-thickness: 1px;
+  color: #005c89;
+  font-size: 1.6rem;
+  margin: 30px 0 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+.introduction2 h2:first-child {
+  margin-top: 0;
+}
+
+/* Decorative element before headers */
+.introduction2 h2::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  background: #005c89;
+  margin-right: 12px;
+  border-radius: 2px;
+}
+
+.introduction2 p {
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  padding-left: 37px;
+  position: relative;
+}
+
+/* Paragraph hover effect */
+.introduction2 p:hover {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Section transitions */
+.introduction2 h2,
+.introduction2 p {
+  transition: all 0.3s ease;
+}
+
+/* Custom styling for different sections */
+.introduction2 h2:nth-of-type(1)::before { background: #2E86C1; }
+.introduction2 h2:nth-of-type(2)::before { background: #3498DB; }
+.introduction2 h2:nth-of-type(3)::before { background: #21618C; }
+.introduction2 h2:nth-of-type(4)::before { background: #1B4F72; }
+
+/* Add subtle highlight to paragraphs */
+.introduction2 p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: rgba(0, 92, 137, 0.1);
+  border-radius: 2px;
 }
 
 .container3 {
@@ -393,6 +656,26 @@ nav .menu {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  /* overflow-y: auto; */
   border-radius: 8px;
 }
+
+/* Custom scrollbar styling */
+.container3-skills-block::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container3-skills-block::-webkit-scrollbar-track {
+  background: rgba(0, 92, 137, 0.05);
+  border-radius: 10px;
+}
+
+.container3-skills-block::-webkit-scrollbar-thumb {
+  background: rgba(0, 92, 137, 0.2);
+  border-radius: 10px;
+}
+
+.container3-skills-block3::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 92, 137, 0.3);
+}
+
 
 .container3-skills-block div {
   /* background-color: #ffffff; */
@@ -726,6 +1009,36 @@ nav .menu {
   color: #bd4343;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  
+}
+
+/* Smooth scroll behavior */
+.container4-projects-block {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+/* Modern scrollbar styling */
+.container4-projects-block::-webkit-scrollbar {
+  width: 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.container4-projects-block::-webkit-scrollbar-track {
+  background: rgba(0, 92, 137, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container4-projects-block::-webkit-scrollbar-thumb {
+  background: rgba(0, 92, 137, 0.5);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container4-projects-block::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 92, 137, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .container4-projects-block > div {
@@ -1201,4 +1514,56 @@ footer {
 #coding-projects-list-form select option {
   background-color: #ffffff;
   color: #000000;
+}
+
+/* Add subtle stage/glow effect */
+#canvas-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 70%, 
+    rgba(0, 92, 137, 0.3) 0%, 
+    transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.collapse-btn {
+    background: none;
+    border: none;
+    color: #005c89;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.collapse-btn:hover {
+    background: rgba(0, 92, 137, 0.1);
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.content.active {
+    max-height: 500px; /* Adjust based on content */
+}
+
+.collapse-btn.active {
+    transform: rotate(45deg);
 }

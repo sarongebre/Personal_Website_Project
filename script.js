@@ -299,3 +299,20 @@ addEventListener("resize", (event) => {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hint = document.querySelector('.interaction-hint');
+  
+  // Hide hint after first interaction
+  const hideHint = () => {
+    hint.style.animation = 'none';
+    hint.style.opacity = '0';
+  };
+
+  document.addEventListener('mousedown', hideHint, { once: true });
+  document.addEventListener('keydown', (e) => {
+    if (e.key.includes('Arrow')) {
+      hideHint();
+    }
+  }, { once: true });
+});

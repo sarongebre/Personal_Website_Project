@@ -15,7 +15,6 @@ Linke to website - https://sarongebre-alwayslearning.netlify.app/ If you have fe
 
 ## Contact Informatiom
 Website - https://sarongebre-alwayslearning.netlify.app/
-Email - saron.solomon2000@gmail.com
 
 ## License
 This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License - see the [LICENSE](LICENSE) file for details.
